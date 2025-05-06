@@ -1,16 +1,17 @@
 import React from 'react'
 
 function CardList({ politico }) {
+    console.log(politico.name);
 
 
     return (
         <div className="card">
-            <h2>{politico.name}</h2>
+            <h2>Nome: {politico.name}</h2>
             <img src={politico.image} alt={politico.name} />
-            <h4>{politico.position}</h4>
-            <p>{politico.biography}</p>
+            <h4> Posizione: {politico.position}</h4>
+            <p><strong> Biografia:</strong>{politico.biography}</p>
         </div>
     )
 }
 
-export default CardList
+export default React.memo(CardList)
